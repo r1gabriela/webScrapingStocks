@@ -20,8 +20,9 @@ public class WebScrape {
 					continue;
 				}else {
 					final String code = row.select("th:nth-of-type(1)").text();
-					System.out.println(code);
 					
+					final String value = row.select("td.text-right:nth-of-type(2)").text();	
+					System.out.println(code+"  --> "+value);
 				}
 			}
 			
